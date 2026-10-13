@@ -1,0 +1,6 @@
+DIRECT-WENO N=3200 RAW CHECK
+ext=0 model=classical_K22_localization A_s=1.352286595895 X_s=53.731017161924 A_f=3.998623743834 X_f=62.514390945762 max_refit_delta=6.584e-11
+ext=1 model=absolute_K22_localization A_s=1.348079794176 X_s=53.783521434445 A_f=3.997196354817 X_f=62.517459194980 max_refit_delta=2.290e-11
+classical-vs-absolute fitted-core difference (N=3200, eval12800)=4.789033577933659e-03
+difference from frozen pair table=2.432e-12
+DWENO_N3200_RAW_CHECK_OK

@@ -1,0 +1,16 @@
+I2 DEFECT AUDIT: trajectory.npz
+N=1600 L=100 p=2.0 c0=1.0 mu=0.0 states=101
+I2(0)                         8.687861165482886e+01
+raw drift / I2(0)             -3.935889303226121e-05
+signed integral delta/I2(0)   -4.345526940605691e-08
+corrected sampled drift       -3.931543776285515e-05
+Simpson                       -6.656684930648033e-08
+SAMPLING (not an error bound):
+  stride= 1 samples= 101 Q=-4.345526940605691e-08 below_1e-8=False
+  stride= 2 samples=  51 Q=+2.587947029521332e-08 below_1e-8=False
+  stride= 4 samples=  26 Q=+3.674555463143778e-08 below_1e-8=False
+  stride= 5 samples=  21 Q=-5.707051295720293e-08 below_1e-8=False
+  stride=10 samples=  11 Q=+1.301975250704603e-08 below_1e-8=False
+  stride=20 samples=   6 Q=-9.916732428193890e-08 below_1e-8=False
+A sampled trapezoidal balance is not a certified temporal-error separation. Inspect sampling_checks; do not treat cancellation after subsampling as an upper bound.
+I2_DEFECT_AUDIT_COMPUTED

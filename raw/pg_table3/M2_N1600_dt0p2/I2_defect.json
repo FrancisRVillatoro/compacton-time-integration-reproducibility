@@ -1,0 +1,93 @@
+{
+  "trajectory_file": "trajectory.npz",
+  "trajectory_sha256": "4186804bdc8e64156ead6eec86da16dd8c7cf08274510dbc054292626739edb7",
+  "source_sha256": "6654f3f81925041273fec3682801fa90022b18d39b8d0f677f7a61bccd107632",
+  "model_metadata": {
+    "L": 100.0,
+    "p": 2.0,
+    "c0": 1.0,
+    "mu": 0.0,
+    "T": 10.0,
+    "N": 1600,
+    "dt": 0.2,
+    "method": "M2",
+    "x1": 40.0,
+    "x2": 60.0,
+    "c1": 3.0,
+    "c2": 1.0,
+    "provenance": "replay of supplied source in the executing environment; not original Picasso trajectory",
+    "mode": "core",
+    "source_sha256": {
+      "pg_lstable_methods.py": "6654f3f81925041273fec3682801fa90022b18d39b8d0f677f7a61bccd107632",
+      "run_pg_lstable_core_task.py": "ecaca13b42526901afd0e1e469a1caf815a2c2881e90fd0de4ed6c55249b366f",
+      "run_pg_lstable_closure.py": "153228808d205a53c27bb3661567af064a57d54c39bdae5df70c47eb7c122c2f"
+    },
+    "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "hostname": "728de620bf57",
+    "thread_environment": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1"
+    }
+  },
+  "states": 51,
+  "I2_initial": 86.87861165482886,
+  "I2_final": 86.75599553704933,
+  "raw_drift_signed_relative": -0.0014113498759244258,
+  "advection_defect_trapezoid_signed_relative": 3.9043732142546555e-08,
+  "viscosity_defect_trapezoid_signed_relative": 0.0,
+  "semidiscrete_defect_trapezoid_signed_relative": 3.9043732142546555e-08,
+  "corrected_drift_trapezoid_signed_relative": -0.0014113889196565683,
+  "corrected_drift_trapezoid_absolute_relative": 0.0014113889196565683,
+  "absolute_defect_to_absolute_drift_ratio": 2.766410569666373e-05,
+  "max_absolute_cumulative_defect_relative": 3.9521345089811434e-08,
+  "integral_absolute_defect_relative": 1.7463155498602666e-07,
+  "simpson_signed_relative": 2.691878791784902e-08,
+  "simpson_minus_trapezoid": -1.2124944224697535e-08,
+  "sampling_checks": [
+    {
+      "stride": 1,
+      "samples": 51,
+      "integral_signed_relative": 3.9043732142546555e-08,
+      "abs_integral_below_1e_8": false
+    },
+    {
+      "stride": 2,
+      "samples": 26,
+      "integral_signed_relative": 7.541856481663912e-08,
+      "abs_integral_below_1e_8": false
+    },
+    {
+      "stride": 4,
+      "samples": 14,
+      "integral_signed_relative": -2.6241953905008256e-08,
+      "abs_integral_below_1e_8": false
+    },
+    {
+      "stride": 5,
+      "samples": 11,
+      "integral_signed_relative": 4.7296546224880767e-08,
+      "abs_integral_below_1e_8": false
+    },
+    {
+      "stride": 10,
+      "samples": 6,
+      "integral_signed_relative": -4.025604283100275e-08,
+      "abs_integral_below_1e_8": false
+    },
+    {
+      "stride": 20,
+      "samples": 4,
+      "integral_signed_relative": -1.265352263940088e-07,
+      "abs_integral_below_1e_8": false
+    }
+  ],
+  "max_fft_lu_difference_relative": 2.7007064074888296e-16,
+  "max_nonlinear_cancellation_relative": 6.429863898901288e-14,
+  "max_chain_rule_identity_residual_relative": 6.431124578617253e-14,
+  "below_threshold_on_full_saved_grid": false,
+  "temporal_quadrature_certified": false,
+  "warning": "A sampled trapezoidal balance is not a certified temporal-error separation. Inspect sampling_checks; do not treat cancellation after subsampling as an upper bound."
+}

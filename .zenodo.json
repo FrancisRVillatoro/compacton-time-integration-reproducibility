@@ -1,0 +1,35 @@
+{
+  "title": "Reproducibility code and data for Temporal filtering of dispersive stiffness in compacton collisions: coherent-scattering benchmarks and accuracy–cost tradeoffs",
+  "creators": [
+    {
+      "name": "Garralón-López, Rubén",
+      "orcid": "0000-0001-6548-3275",
+      "affiliation": "Universidad de Granada"
+    },
+    {
+      "name": "Rus, Francisco",
+      "orcid": "0000-0002-7641-0255",
+      "affiliation": "Universidad de Málaga"
+    },
+    {
+      "name": "Villatoro, Francisco R.",
+      "orcid": "0000-0003-4314-6213",
+      "affiliation": "Universidad de Málaga"
+    }
+  ],
+  "version": "1.0.0",
+  "access_right": "open",
+  "license": "mit",
+  "upload_type": "software",
+  "language": "eng",
+  "description": "Code, raw trajectories, processed data and verification scripts for reproducible numerical experiments on temporal filtering, dispersive stiffness, compacton collisions, coherent-core benchmarks and accuracy-cost tradeoffs.",
+  "keywords": [
+    "compactons",
+    "nonlinear dispersive waves",
+    "time integration",
+    "L-stability",
+    "Petrov-Galerkin",
+    "Direct-WENO",
+    "reproducibility"
+  ]
+}

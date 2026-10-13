@@ -1,0 +1,106 @@
+JobID           JobName      State    Elapsed     MaxRSS ExitCode
+------------ ---------- ---------- ---------- ---------- --------
+2627536_2       k22_ext  COMPLETED   18:54:10                 0:0
+2627536_2.b+      batch  COMPLETED   18:54:10    106788K      0:0
+2627536_3       k22_ext  COMPLETED   22:39:38                 0:0
+2627536_3.b+      batch  COMPLETED   22:39:38    107992K      0:0
+frv@picasso3:~/fscratch/dweno_p3ca_highres/picasso_flux_ready_20261004> ls -lh \
+>   k22_ext/k22ext_cc_N1600_ext1.npz \
+>   k22_ext/k22ext_cc_N1600_ext1.json \
+>   k22_ext/k22ext_cc_N3200_ext0.npz \
+>   k22_ext/k22ext_cc_N3200_ext0.json \
+>   k22_ext/k22ext_cc_N3200_ext1.npz \
+>   k22_ext/k22ext_cc_N3200_ext1.json
+-rw-r-----+ 1 frv tic_118_uma  338 Oct  4 16:20 k22_ext/k22ext_cc_N1600_ext1.json
+-rw-r-----+ 1 frv tic_118_uma 2.5M Oct  4 16:20 k22_ext/k22ext_cc_N1600_ext1.npz
+-rw-r-----+ 1 frv tic_118_uma  343 Oct  5 09:59 k22_ext/k22ext_cc_N3200_ext0.json
+-rw-r-----+ 1 frv tic_118_uma 4.9M Oct  5 09:59 k22_ext/k22ext_cc_N3200_ext0.npz
+-rw-r-----+ 1 frv tic_118_uma  339 Oct  5 13:44 k22_ext/k22ext_cc_N3200_ext1.json
+-rw-r-----+ 1 frv tic_118_uma 4.9M Oct  5 13:44 k22_ext/k22ext_cc_N3200_ext1.npz
+frv@picasso3:~/fscratch/dweno_p3ca_highres/picasso_flux_ready_20261004> module purge
+esults.pyfrv@picasso3:~/fscratch/dweno_p3ca_highres/picasso_flux_ready_20261004> module load anaconda/2022.10
+frv@picasso3:~/fscratch/dweno_p3ca_highres/picasso_flux_ready_20261004>
+frv@picasso3:~/fscratch/dweno_p3ca_highres/picasso_flux_ready_20261004> python analyze_flux_results.py
+DIRECT-WENO FLUX COMPARISON
+PG comparator: M2 N=1600 dt=.05 (finite-step result).
+All validated inputs: CC, L=100, c0=1, mu=0, T=10, CFL=.075, eps=1e-6, 201 snapshots.
+
+ext=0 N=800 As=1.349216689 Xs=53.753219130 Af=3.997986566 Xf=62.515599325 EvsPG=3.818988303e-04 min_u=-8.633554e-02 bound=False
+ext=0 N=1600 As=1.353093726 Xs=53.722409498 Af=3.998591786 Xf=62.513939619 EvsPG=3.273667873e-03 min_u=-3.925697e-01 bound=False
+ext=0 N=3200 As=1.352286596 Xs=53.731017162 Af=3.998623744 Xf=62.514390946 EvsPG=2.481466296e-03 min_u=-6.280127e-01 bound=False
+ext=1 N=800 As=1.349241549 Xs=53.765607981 Af=3.997647277 Xf=62.516353565 EvsPG=7.457750979e-04 min_u=-9.522585e-02 bound=False
+ext=1 N=1600 As=1.348476018 Xs=53.778662329 Af=3.997363923 Xf=62.517167434 EvsPG=1.903098891e-03 min_u=-7.805653e-02 bound=False
+ext=1 N=3200 As=1.348079794 Xs=53.783521434 Af=3.997196355 Xf=62.517459195 EvsPG=2.340737861e-03 min_u=-7.272969e-02 bound=False
+
+PAIRWISE (normalized by second fitted model):
+grid_refinement ext0/N800 -> ext0/N1600: E1600=2.907003048e-03 E12800=2.907007818e-03 dXs=-3.080963277e-02 dXf=-1.659705235e-03
+grid_refinement ext0/N1600 -> ext0/N3200: E1600=7.970093953e-04 E12800=7.970094196e-04 dXs=+8.607664350e-03 dXf=+4.513263209e-04
+grid_refinement ext1/N800 -> ext1/N1600: E1600=1.175569747e-03 E12800=1.175567721e-03 dXs=+1.305434869e-02 dXf=+8.138683720e-04
+grid_refinement ext1/N1600 -> ext1/N3200: E1600=4.426128041e-04 E12800=4.426107800e-04 dXs=+4.859105050e-03 dXf=+2.917612354e-04
+flux_swap_same_grid ext0/N800 -> ext1/N800: E1600=1.100318051e-03 E12800=1.100320991e-03 dXs=+1.238885037e-02 dXf=+7.542406885e-04
+flux_swap_same_grid ext0/N1600 -> ext1/N1600: E1600=5.141465831e-03 E12800=5.141472073e-03 dXs=+5.625283183e-02 dXf=+3.227814296e-03
+flux_swap_same_grid ext0/N3200 -> ext1/N3200: E1600=4.789028796e-03 E12800=4.789033576e-03 dXs=+5.250427253e-02 dXf=+3.068249210e-03
+
+CONTRACTION:
+{"ext": 0, "E_800_1600": 0.0029070078179253608, "E_1600_3200": 0.0007970094195898183, "ratio": 0.27416830965340117, "apparent_order": 1.8668662712103228, "interpretation": "Finite-grid diagnostic, not proof of continuum convergence or an error bound."}
+{"ext": 1, "E_800_1600": 0.0011755677210528387, "E_1600_3200": 0.0004426107800112411, "ratio": 0.37650810930300027, "apparent_order": 1.409247156616368, "interpretation": "Finite-grid diagnostic, not proof of continuum convergence or an error bound."}
+
+MISSING:
+
+INTERPRETATION:
+A displacement of the slow core alone does not establish the mechanism.
+Use all four fitted parameters, same-grid flux differences, and within-flux refinement together.
+The original WENO N=1600-to-N=3200 controls test spatial sensitivity at the stated CFL and epsilon.
+No convergence claim follows from a single small inter-grid difference.
+
+FLUX_COMPARISON_ANALYSIS_OK (status=all_requested_inputs_present)
+frv@picasso3:~/fscratch/dweno_p3ca_highres/picasso_flux_ready_20261004> cat analysis/flux_comparison_report.txt
+DIRECT-WENO FLUX COMPARISON
+PG comparator: M2 N=1600 dt=.05 (finite-step result).
+All validated inputs: CC, L=100, c0=1, mu=0, T=10, CFL=.075, eps=1e-6, 201 snapshots.
+
+ext=0 N=800 As=1.349216689 Xs=53.753219130 Af=3.997986566 Xf=62.515599325 EvsPG=3.818988303e-04 min_u=-8.633554e-02 bound=False
+ext=0 N=1600 As=1.353093726 Xs=53.722409498 Af=3.998591786 Xf=62.513939619 EvsPG=3.273667873e-03 min_u=-3.925697e-01 bound=False
+ext=0 N=3200 As=1.352286596 Xs=53.731017162 Af=3.998623744 Xf=62.514390946 EvsPG=2.481466296e-03 min_u=-6.280127e-01 bound=False
+ext=1 N=800 As=1.349241549 Xs=53.765607981 Af=3.997647277 Xf=62.516353565 EvsPG=7.457750979e-04 min_u=-9.522585e-02 bound=False
+ext=1 N=1600 As=1.348476018 Xs=53.778662329 Af=3.997363923 Xf=62.517167434 EvsPG=1.903098891e-03 min_u=-7.805653e-02 bound=False
+ext=1 N=3200 As=1.348079794 Xs=53.783521434 Af=3.997196355 Xf=62.517459195 EvsPG=2.340737861e-03 min_u=-7.272969e-02 bound=False
+
+PAIRWISE (normalized by second fitted model):
+grid_refinement ext0/N800 -> ext0/N1600: E1600=2.907003048e-03 E12800=2.907007818e-03 dXs=-3.080963277e-02 dXf=-1.659705235e-03
+grid_refinement ext0/N1600 -> ext0/N3200: E1600=7.970093953e-04 E12800=7.970094196e-04 dXs=+8.607664350e-03 dXf=+4.513263209e-04
+grid_refinement ext1/N800 -> ext1/N1600: E1600=1.175569747e-03 E12800=1.175567721e-03 dXs=+1.305434869e-02 dXf=+8.138683720e-04
+grid_refinement ext1/N1600 -> ext1/N3200: E1600=4.426128041e-04 E12800=4.426107800e-04 dXs=+4.859105050e-03 dXf=+2.917612354e-04
+flux_swap_same_grid ext0/N800 -> ext1/N800: E1600=1.100318051e-03 E12800=1.100320991e-03 dXs=+1.238885037e-02 dXf=+7.542406885e-04
+flux_swap_same_grid ext0/N1600 -> ext1/N1600: E1600=5.141465831e-03 E12800=5.141472073e-03 dXs=+5.625283183e-02 dXf=+3.227814296e-03
+flux_swap_same_grid ext0/N3200 -> ext1/N3200: E1600=4.789028796e-03 E12800=4.789033576e-03 dXs=+5.250427253e-02 dXf=+3.068249210e-03
+
+CONTRACTION:
+{"ext": 0, "E_800_1600": 0.0029070078179253608, "E_1600_3200": 0.0007970094195898183, "ratio": 0.27416830965340117, "apparent_order": 1.8668662712103228, "interpretation": "Finite-grid diagnostic, not proof of continuum convergence or an error bound."}
+{"ext": 1, "E_800_1600": 0.0011755677210528387, "E_1600_3200": 0.0004426107800112411, "ratio": 0.37650810930300027, "apparent_order": 1.409247156616368, "interpretation": "Finite-grid diagnostic, not proof of continuum convergence or an error bound."}
+
+MISSING:
+
+INTERPRETATION:
+A displacement of the slow core alone does not establish the mechanism.
+Use all four fitted parameters, same-grid flux differences, and within-flux refinement together.
+The original WENO N=1600-to-N=3200 controls test spatial sensitivity at the stated CFL and epsilon.
+No convergence claim follows from a single small inter-grid difference.
+frv@picasso3:~/fscratch/dweno_p3ca_highres/picasso_flux_ready_20261004> cat analysis/dweno_core_fits.csv
+file,sha256,model,ext,N,L,T,c0,mu,eps,cfl,A_s,X_s,A_f,X_f,E_core_vs_PG,E_core_vs_PG_eval12800,min_u,max_u,remainder_fraction,fit_near_bound
+/mnt/fscratch/users/tic_118_uma/frv/dweno_p3ca_highres/picasso_flux_ready_20261004/baseline_N800/cc_N800_ext0.npz,29babc260877594c9f041ffb05dd0853e0161facc0998d6e26a7057de4d7d921,classical_K22_localization,0,800,100.0,10.0,1.0,0.0,1e-06,0.075,1.3492166892083062,53.75321913031215,3.9979865657927185,62.51559932467695,0.0003818988303454681,0.00038190151274230817,-0.08633553831139415,3.961812945585425,0.025104923474666828,False
+/mnt/fscratch/users/tic_118_uma/frv/dweno_p3ca_highres/k22_localization/k22loc_cc_N1600.npz,096b2e5c72da060b2d853d52e7cc3d04e7f12fe5aba131a18abcdc9c2aaf3b72,classical_K22_localization,0,1600,100.0,10.0,1.0,0.0,1e-06,0.075,1.3530937255372921,53.72240949754703,3.9985917857477946,62.51393961944187,0.003273667872539469,0.0032736748065784163,-0.39256965661123555,3.961945182383907,0.07136897043764144,False
+/mnt/fscratch/users/tic_118_uma/frv/dweno_p3ca_highres/picasso_flux_ready_20261004/k22_ext/k22ext_cc_N3200_ext0.npz,050b4a9c64f9c10cd90df60765cfcbe457af3d40b59b7f85befe0ce2db302fc8,classical_K22_localization,0,3200,100.0,10.0,1.0,0.0,1e-06,0.075,1.352286595829157,53.73101716189717,3.9986237437934604,62.514390945762734,0.002481466296366796,0.002481474131732948,-0.6280127280906785,3.962321391695717,0.09009595980487754,False
+/mnt/fscratch/users/tic_118_uma/frv/dweno_p3ca_highres/picasso_flux_ready_20261004/baseline_N800/cc_N800_ext1.npz,c214e367bba3e383b85c80881809f900899a34b7a30437662dc375d472be6a5d,absolute_K22_localization,1,800,100.0,10.0,1.0,0.0,1e-06,0.075,1.3492415492012775,53.765607980679626,3.9976472765922177,62.516353565365435,0.0007457750979319739,0.0007457756894916704,-0.09522585286008309,3.9617517738038606,0.02438341707607041,False
+/mnt/fscratch/users/tic_118_uma/frv/dweno_p3ca_highres/picasso_flux_ready_20261004/k22_ext/k22ext_cc_N1600_ext1.npz,95603ba5531ae0fd90fdc5a9d08c1c54bba3f039b2db85691ed2cf27567b2eac,absolute_K22_localization,1,1600,100.0,10.0,1.0,0.0,1e-06,0.075,1.348476017759077,53.77866232937285,3.997363922861976,62.51716743373748,0.001903098890883527,0.0019030984239450553,-0.07805652547784817,3.961864417202082,0.02303797972378884,False
+/mnt/fscratch/users/tic_118_uma/frv/dweno_p3ca_highres/picasso_flux_ready_20261004/k22_ext/k22ext_cc_N3200_ext1.npz,a70fbfa816b97f07535fc203ca56a43a5e2b184618e51ee3e4f0ab08b0550560,absolute_K22_localization,1,3200,100.0,10.0,1.0,0.0,1e-06,0.075,1.34807979416512,53.783521434422525,3.9971963548196703,62.517459194972844,0.002340737861000608,0.002340735759593122,-0.07272968584848727,3.9620294980529205,0.022794515163133435,False
+frv@picasso3:~/fscratch/dweno_p3ca_highres/picasso_flux_ready_20261004> cat analysis/dweno_core_pairs.csv
+kind,ext_1,N_1,ext_2,N_2,file_1,file_2,normalization,E_core_eval1600,E_core_eval12800,dA_s,dX_s,dA_f,dX_f
+grid_refinement,0,800,0,1600,/mnt/fscratch/users/tic_118_uma/frv/dweno_p3ca_highres/picasso_flux_ready_20261004/baseline_N800/cc_N800_ext0.npz,/mnt/fscratch/users/tic_118_uma/frv/dweno_p3ca_highres/k22_localization/k22loc_cc_N1600.npz,norm of second fitted core model,0.002907003047654203,0.0029070078179253608,0.00387703632898595,-0.030809632765119943,0.0006052199550761195,-0.0016597052350775243
+grid_refinement,0,1600,0,3200,/mnt/fscratch/users/tic_118_uma/frv/dweno_p3ca_highres/k22_localization/k22loc_cc_N1600.npz,/mnt/fscratch/users/tic_118_uma/frv/dweno_p3ca_highres/picasso_flux_ready_20261004/k22_ext/k22ext_cc_N3200_ext0.npz,norm of second fitted core model,0.0007970093952985492,0.0007970094195898183,-0.0008071297081351236,0.008607664350144262,3.195804566580307e-05,0.0004513263208636431
+grid_refinement,1,800,1,1600,/mnt/fscratch/users/tic_118_uma/frv/dweno_p3ca_highres/picasso_flux_ready_20261004/baseline_N800/cc_N800_ext1.npz,/mnt/fscratch/users/tic_118_uma/frv/dweno_p3ca_highres/picasso_flux_ready_20261004/k22_ext/k22ext_cc_N1600_ext1.npz,norm of second fitted core model,0.00117556974675288,0.0011755677210528387,-0.0007655314422003734,0.013054348693223972,-0.0002833537302415756,0.0008138683720417816
+grid_refinement,1,1600,1,3200,/mnt/fscratch/users/tic_118_uma/frv/dweno_p3ca_highres/picasso_flux_ready_20261004/k22_ext/k22ext_cc_N1600_ext1.npz,/mnt/fscratch/users/tic_118_uma/frv/dweno_p3ca_highres/picasso_flux_ready_20261004/k22_ext/k22ext_cc_N3200_ext1.npz,norm of second fitted core model,0.0004426128041174519,0.0004426107800112411,-0.0003962235939571901,0.00485910504967535,-0.00016756804230588784,0.00029176123536700516
+flux_swap_same_grid,0,800,1,800,/mnt/fscratch/users/tic_118_uma/frv/dweno_p3ca_highres/picasso_flux_ready_20261004/baseline_N800/cc_N800_ext0.npz,/mnt/fscratch/users/tic_118_uma/frv/dweno_p3ca_highres/picasso_flux_ready_20261004/baseline_N800/cc_N800_ext1.npz,norm of second fitted core model,0.0011003180505688094,0.0011003209911491384,2.485999297130448e-05,0.012388850367479165,-0.0003392892005007475,0.0007542406884866182
+flux_swap_same_grid,0,1600,1,1600,/mnt/fscratch/users/tic_118_uma/frv/dweno_p3ca_highres/k22_localization/k22loc_cc_N1600.npz,/mnt/fscratch/users/tic_118_uma/frv/dweno_p3ca_highres/picasso_flux_ready_20261004/k22_ext/k22ext_cc_N1600_ext1.npz,norm of second fitted core model,0.005141465831418362,0.0051414720725719235,-0.004617707778215019,0.05625283182582308,-0.0012278628858184426,0.003227814295605924
+flux_swap_same_grid,0,3200,1,3200,/mnt/fscratch/users/tic_118_uma/frv/dweno_p3ca_highres/picasso_flux_ready_20261004/k22_ext/k22ext_cc_N3200_ext0.npz,/mnt/fscratch/users/tic_118_uma/frv/dweno_p3ca_highres/picasso_flux_ready_20261004/k22_ext/k22ext_cc_N3200_ext1.npz,norm of second fitted core model,0.004789028796299299,0.004789033575501168,-0.004206801664037085,0.05250427252535417,-0.0014273889737901335,0.003068249210109286
+frv@picasso3:~/fscratch/dweno_p3ca_highres/picasso_flux_ready_20261004>

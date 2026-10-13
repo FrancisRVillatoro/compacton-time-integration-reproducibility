@@ -1,0 +1,33 @@
+{
+  "accepted_nodes": 401,
+  "stage_nodes": 400,
+  "accepted_only_trapezoid": -2.38289238918793e-08,
+  "accepted_plus_stage_trapezoid": -2.6114422105385424e-08,
+  "quadratic_controls": [
+    {
+      "subintervals_per_step": 2,
+      "quadratic_interpolant_trapezoid": -2.4885699652932272e-08
+    },
+    {
+      "subintervals_per_step": 4,
+      "quadratic_interpolant_trapezoid": -2.4653753814944743e-08
+    },
+    {
+      "subintervals_per_step": 8,
+      "quadratic_interpolant_trapezoid": -2.4549669094880043e-08
+    },
+    {
+      "subintervals_per_step": 16,
+      "quadratic_interpolant_trapezoid": -2.452013039734026e-08
+    },
+    {
+      "subintervals_per_step": 32,
+      "quadratic_interpolant_trapezoid": -2.4511704739868234e-08
+    },
+    {
+      "subintervals_per_step": 64,
+      "quadratic_interpolant_trapezoid": -2.450964506632387e-08
+    }
+  ],
+  "interpretation": "Numerical sampling controls on one recorded trajectory; the quadratic interpolant is explicitly defined, not the exact ODE solution. No rigorous error bound is asserted."
+}

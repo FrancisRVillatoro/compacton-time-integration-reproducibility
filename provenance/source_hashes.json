@@ -1,0 +1,21 @@
+{
+  "baseline_N800/cc_N800_ext0.json": "a52bc0a6967becda9793a77219b065764c04b69f805f4fc67109b82c3da7a442",
+  "baseline_N800/cc_N800_ext0.npz": "29babc260877594c9f041ffb05dd0853e0161facc0998d6e26a7057de4d7d921",
+  "baseline_N800/cc_N800_ext1.json": "e9b22bcc7437ca54c7faaf8cd30f202b7afa118807e4141e92651da0325791fb",
+  "baseline_N800/cc_N800_ext1.npz": "c214e367bba3e383b85c80881809f900899a34b7a30437662dc375d472be6a5d",
+  "code/direct_weno_k22_ext_numba.py": "f14952a97cae8fc205446785aa73a324c518863dad83a384fb394e161c8b8546",
+  "code/fit_dweno_cores.py": "7e26edb90348e5ce69942c6c53f28bc3cfacdaa4d7eec2e12529fcbdcbe54c0d",
+  "direct_weno_k22_ext_numba.py": "f14952a97cae8fc205446785aa73a324c518863dad83a384fb394e161c8b8546",
+  "fit_dweno_cores.py": "7e26edb90348e5ce69942c6c53f28bc3cfacdaa4d7eec2e12529fcbdcbe54c0d",
+  "originals/README_flux_test.txt": "a64b94d5ddf5a69116f739d48160b39bc1a8d642a3deb41a34354ca845fc7476",
+  "originals/batch_k22_ext.sh.txt": "6d4d550143b64ec85e89a98401dfea5d4b4b3cb22ac72dda548c3c960d4dc877",
+  "originals/direct_weno_k22_localization_numba.py": "fa8a796492445dab37da8e7042ea3d35527fa36e30be00537364fee148210235",
+  "originals/dweno_core_fits.json": "3700da45784df3401739a6830bd032857fc69a20066f80bfdf8761ebc194bb3e",
+  "pg_code/pg_lstable_methods.py": "6654f3f81925041273fec3682801fa90022b18d39b8d0f677f7a61bccd107632",
+  "pg_code/run_pg_lstable_core_task.py": "ecaca13b42526901afd0e1e469a1caf815a2c2881e90fd0de4ed6c55249b366f",
+  "raw_available/cc_N800_ext0.npz": "29babc260877594c9f041ffb05dd0853e0161facc0998d6e26a7057de4d7d921",
+  "raw_available/cc_N800_ext1.npz": "c214e367bba3e383b85c80881809f900899a34b7a30437662dc375d472be6a5d",
+  "raw_available/k22ext_cc_N1600_ext1.npz": "95603ba5531ae0fd90fdc5a9d08c1c54bba3f039b2db85691ed2cf27567b2eac",
+  "raw_available/k22ext_cc_N3200_ext0.npz": "050b4a9c64f9c10cd90df60765cfcbe457af3d40b59b7f85befe0ce2db302fc8",
+  "raw_available/k22ext_cc_N3200_ext1.npz": "a70fbfa816b97f07535fc203ca56a43a5e2b184618e51ee3e4f0ab08b0550560"
+}

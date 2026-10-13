@@ -1,0 +1,34 @@
+{
+  "PG": {
+    "L": 100.0,
+    "p": 2.0,
+    "c0": 1.0,
+    "mu": 0.0,
+    "T": 10.0,
+    "x1": 40.0,
+    "x2": 60.0,
+    "c1": 3.0,
+    "c2": 1.0,
+    "grid": "x_j=j*L/N, j=0,...,N-1",
+    "flux": "abs(u)*u"
+  },
+  "DWENO_reference": {
+    "L": 100.0,
+    "p": 2.0,
+    "c0": 1.0,
+    "mu": 0.0,
+    "T": 10.0,
+    "x1": 40.0,
+    "x2": 60.0,
+    "c1": 3.0,
+    "c2": 1.0,
+    "grid": "x_j=j*L/N, j=0,...,N-1",
+    "flux": "u*u"
+  },
+  "equal_domain": true,
+  "equal_origin": true,
+  "equal_artificial_viscosity": true,
+  "same_signed_flux": false,
+  "viscosity_only_rerun_needed": false,
+  "note": "These parameters are verified in the archived execution scripts. Equal L and mu do not remove the difference between the absolute and classical fluxes on negative states."
+}

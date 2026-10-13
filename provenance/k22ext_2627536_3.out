@@ -1,0 +1,23 @@
+FLUX_KERNEL_QA_PASS ext=0 regression; ext=1 signed-flux and constant-state tests
+{
+  "status": "pass",
+  "python": "3.9.13 (main, Aug 25 2022, 23:26:10) \n[GCC 11.2.0]",
+  "numpy": "1.24.4",
+  "numba": "0.57.1",
+  "tests": {
+    "ext0_rhs_step_dt_bitwise_identical": true,
+    "nonnegative_rhs_identical": true,
+    "both_extensions_preserve_constants": true,
+    "signed_rhs_max_difference": 1.850596738188369,
+    "signed_abs_mass_rhs_sum": 4.440892098500626e-16
+  },
+  "note": "Same-environment regression only. No N=1600/3200 T=10 production integration performed."
+}
+FLUX_TASK_START task=3 N=3200 ext=1 20261004T130511Z
+PARAMETERS {"L": 100.0, "N": 3200, "T": 10.0, "c0": 1.0, "case": "cc", "cfl": 0.075, "eps": 1e-06, "ext": 1, "mu": 0.0, "nout": 201, "out": "/mnt/fscratch/users/tic_118_uma/frv/dweno_p3ca_highres/picasso_flux_ready_20261004/k22_ext/k22ext_cc_N3200_ext1"}
+PROGRESS snapshot=0/200 t=0 elapsed_s=0.2 min_u=+0.000000e+00 max_u=4.000000e+00
+PROGRESS snapshot=10/200 t=0.5 elapsed_s=4269.6 min_u=-2.895995e-04 max_u=4.000000e+00
+PROGRESS snapshot=20/200 t=1 elapsed_s=8527.7 min_u=-2.895900e-04 max_u=4.000000e+00
+PROGRESS snapshot=30/200 t=1.5 elapsed_s=12786.0 min_u=-2.895907e-04 max_u=4.000000e+00
+PROGRESS snapshot=40/200 t=2 elapsed_s=17045.1 min_u=-2.900113e-04 max_u=4.000000e+00
+PROGRESS snapshot=50/200 t=2.5 elapsed_s=21184.9 min_u=-2.934458e-04 max_u=4.000000e+00

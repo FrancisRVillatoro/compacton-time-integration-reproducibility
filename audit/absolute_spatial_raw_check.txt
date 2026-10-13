@@ -1,0 +1,2 @@
+max absolute difference from frozen absolute spatial table: 9.756e-10
+ABSOLUTE_SPATIAL_RAW_CHECK_OK
