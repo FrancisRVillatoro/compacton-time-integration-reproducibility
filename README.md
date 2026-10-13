@@ -1,4 +1,5 @@
 # Reproducibility code and data
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23340893.svg)](https://doi.org/10.5281/zenodo.23340893)
 
 **Temporal filtering of dispersive stiffness in compacton collisions: coherent-scattering benchmarks and accuracy–cost tradeoffs**
 
