@@ -2,8 +2,8 @@ cff-version: 1.2.0
 message: "If you use these code or data, please cite this archived release."
 title: "Reproducibility code and data for Temporal filtering of dispersive stiffness in compacton collisions: coherent-scattering benchmarks and accuracy–cost tradeoffs"
 type: software
-version: 1.0.0
-date-released: 2026-10-13
+version: 1.1.0
+date-released: 2026-10-21
 license: MIT
 authors:
   - family-names: "Garralón-López"
@@ -16,4 +16,3 @@ authors:
     given-names: "Francisco R."
     orcid: "https://orcid.org/0000-0003-4314-6213"
 repository-code: "https://github.com/FrancisRVillatoro/compacton-time-integration-reproducibility"
-doi: "10.5281/zenodo.23340893"

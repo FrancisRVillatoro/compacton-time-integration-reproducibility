@@ -1,0 +1,8 @@
+GA_CORRECTED_VALIDATION_OK
+max_matrix_error=1.1102230246251565e-16
+midpoint_endpoint_error=3.4694469519536142e-18
+rho=1 final_order=2.000073266902
+rho=0.9 final_order=2.000073706443
+rho=0.5 final_order=1.998068415157
+rho=0.25 final_order=1.987845572338
+rho=0 final_order=1.938304931335

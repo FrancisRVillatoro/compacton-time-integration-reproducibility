@@ -1,0 +1,38 @@
+{
+  "data": {
+    "figure_2_jacobian_csv_sha256": "235e9bf02dd62460cd8811d8de841ba1a4335908de630dc6b59708fa1dc6d687",
+    "figure_3_corrected_ga_csv_sha256": "a432aa11e08eb56edcb5b35dcd378973b700793ddf9ea5a7f92e81aa9777d5d8"
+  },
+  "generalized_alpha": {
+    "figure_1_source": "canonical ga_matrix/ga_rho only",
+    "figure_2_source": "regenerated Jacobian CSV; no nonlinear GA stepper",
+    "figure_3_source": "corrected fine Picasso case; coarse N=100 screen excluded"
+  },
+  "pdfs": {
+    "fig1_pg_symbol_filters_left.pdf": {
+      "bytes": 20121,
+      "sha256": "4350fcc244425dcaf37a78d6a0616d88ea552ae44bd319e760fa154edc742064"
+    },
+    "fig1_pg_symbol_filters_right.pdf": {
+      "bytes": 17916,
+      "sha256": "d741bfd6fb910a7d2eeedd3447539e5054ebee3806b7ecde5bb46078a18278ee"
+    },
+    "fig2_jacobian_h3_scaling_left.pdf": {
+      "bytes": 18958,
+      "sha256": "63c4c44c27a3d5e5ff726f947bbfdaa73b26a9a559a1f19280d4b291a0084503"
+    },
+    "fig2_jacobian_h3_scaling_right.pdf": {
+      "bytes": 17138,
+      "sha256": "e28d449a716f871ca59a7787141fb98c89f546709f00fe86482e300184908cd3"
+    },
+    "fig3_controlled_damping_tradeoff_left.pdf": {
+      "bytes": 19490,
+      "sha256": "3eb902fe47f8e1d7977c592bf424bff200440679650e3b55bd6dbbe881032f4e"
+    },
+    "fig3_controlled_damping_tradeoff_right.pdf": {
+      "bytes": 13715,
+      "sha256": "0e6272b13d81dcae74120a6dc090ad043fcedca3d612c0fe523a41821ad5c76b"
+    }
+  },
+  "status": "FIGURE_TRACEABILITY_OK"
+}

@@ -17,12 +17,12 @@
       "affiliation": "Universidad de Málaga"
     }
   ],
-  "version": "1.0.0",
+  "version": "1.1.0",
   "access_right": "open",
   "license": "mit",
   "upload_type": "software",
   "language": "eng",
-  "description": "Code, raw trajectories, processed data and verification scripts for reproducible numerical experiments on temporal filtering, dispersive stiffness, compacton collisions, coherent-core benchmarks and accuracy-cost tradeoffs.",
+  "description": "Code, raw and processed data, production sources, figure scripts, provenance and verification for temporal filtering, dispersive stiffness, compacton collisions, corrected generalized-alpha damping experiments, Jacobian scaling, robustness screens, coherent-core benchmarks and accuracy-cost tradeoffs.",
   "keywords": [
     "compactons",
     "nonlinear dispersive waves",
@@ -30,6 +30,10 @@
     "L-stability",
     "Petrov-Galerkin",
     "Direct-WENO",
-    "reproducibility"
+    "reproducibility",
+    "generalized-alpha",
+    "Jacobian spectra",
+    "MATLAB",
+    "robustness screening"
   ]
 }

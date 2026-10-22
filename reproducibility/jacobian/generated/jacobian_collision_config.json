@@ -1,0 +1,38 @@
+{
+  "command": "python recompute_collision_jacobian.py",
+  "configuration": {
+    "c0": 1.0,
+    "c1": 2.0,
+    "c2": -1.0,
+    "dt": 0.025,
+    "eigen_count": 60,
+    "length": 100.0,
+    "mu": 0.001,
+    "n": 1000,
+    "newton_maxit": 40,
+    "newton_tol": 1e-09,
+    "p": 3.0,
+    "snapshot_times": [
+      5.0,
+      20.0,
+      30.0
+    ],
+    "x1": 40.0,
+    "x2": 60.0
+  },
+  "eigensolver": {
+    "library": "scipy.sparse.linalg.eigs (ARPACK)",
+    "maxiter": 50000,
+    "starting_vector": "deterministic_v0 in jacobian_core.py",
+    "tolerance": 1e-10,
+    "which": "LM"
+  },
+  "elapsed_seconds": 21.235523373999968,
+  "software": {
+    "numpy": "2.3.5",
+    "python": "3.13.5",
+    "scipy": "1.17.0"
+  },
+  "spatial_formula": "J(U)=-A^{-1}[mu*h^2*D-c0*B+(B+C)diag(p*abs(U)^(p-1))]",
+  "trajectory_method": "Pad\u00e9 R_{1,2} fractional step (M2)"
+}

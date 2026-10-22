@@ -1,0 +1,20 @@
+Corrected production code:
+  code/ga_core.py
+  code/validate_ga.py
+  code/run_microbank_group.py
+  code/run_boundary_group.py
+  code/run_single_benchmark.py
+  code/aggregate_results.py
+Slurm:
+  validate_ga.sbatch
+  microbank_ga.sbatch
+  boundary_ga.sbatch
+  single_ga.sbatch
+  aggregate_ga.sbatch
+  submit_all.sh
+Historical reference (never overwritten):
+  historical_reference/absK_controlled_damping_solver_HISTORICAL.py
+  historical_reference/fast_ga_solver_HISTORICAL.py
+  historical_reference/ga_microbank_396_complete_N100.csv
+  historical_reference/ga_boundary_confirmation_N500_N1000.csv
+  historical_reference/ga_single_CA_benchmark_v2.csv

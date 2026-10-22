@@ -1,0 +1,10 @@
+bank,method,completed,assigned,median_auc,p95_auc
+mu-dt,M1,454,480,0.000142,0.401
+mu-dt,M2,480,480,0.00000345,0.00184
+mu-dt,M3,457,480,0.0000999,0.365
+severity,M1,482,576,0.00285,5.67
+severity,M2,576,576,0.00000840,0.00373
+severity,M3,473,576,0.00160,3.08
+long-time,M1,123,192,,
+long-time,M2,192,192,,
+long-time,M3,122,192,,

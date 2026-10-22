@@ -1,0 +1,172 @@
+{
+  "artifacts": {
+    "frozen/jacobian_highfreq_modes_and_filters.csv": {
+      "bytes": 36398,
+      "sha256": "fd41b031d0ee82bdcf055feab7e94a9c253e36fab28024350745501b74444cb6"
+    },
+    "frozen/jacobian_mesh_scaling.csv": {
+      "bytes": 2230,
+      "sha256": "98211ade1b46627ac49e4003a8be8b40215a4c969a138d513a78f223428dbc3e"
+    },
+    "frozen/jacobian_mesh_scaling_fits.csv": {
+      "bytes": 843,
+      "sha256": "ac95f9f51aea87ad25060bd9d875843cc0c4f5e46679ba115b997ceb66a56a14"
+    },
+    "generated/jacobian_highfreq_modes_and_filters.csv": {
+      "bytes": 36623,
+      "sha256": "063b00b0c07d25ee39d7c4ddfa883e0591c21e2f93e5278ef328e7fd770b7488"
+    },
+    "generated/jacobian_mesh_scaling.csv": {
+      "bytes": 2237,
+      "sha256": "235e9bf02dd62460cd8811d8de841ba1a4335908de630dc6b59708fa1dc6d687"
+    },
+    "generated/jacobian_mesh_scaling_fits.csv": {
+      "bytes": 856,
+      "sha256": "d1e58aa5f972aa0bbd761db1f9dc6608f0aea58c820daeb1d52eb95d1bc8bedf"
+    },
+    "raw/jacobian_collision_snapshots.npz": {
+      "bytes": 32980,
+      "sha256": "d298a10869fa831fac471f559a3af9b34421ed0bb7adf07a0ab137acd3a78a8d"
+    }
+  },
+  "collision": {
+    "t=20": {
+      "amplification_errors": {
+        "GA_rho_0": {
+          "max_abs": 3.1363800445660672e-15,
+          "max_rel": 7.973028251815707e-14
+        },
+        "GA_rho_0p5": {
+          "max_abs": 2.886579864025407e-15,
+          "max_rel": 5.465906618010731e-15
+        },
+        "M1_amp": {
+          "max_abs": 2.220446049250313e-16,
+          "max_rel": 2.2204579607270395e-16
+        },
+        "M2_amp": {
+          "max_abs": 9.575673587391975e-16,
+          "max_rel": 1.5293919704614684e-13
+        },
+        "M3_amp": {
+          "max_abs": 3.3306690738754696e-16,
+          "max_rel": 3.3306738056093186e-16
+        }
+      },
+      "max_complex_abs_error": 4.391041132468431e-09,
+      "max_complex_relative_error": 1.5303904452783081e-13
+    },
+    "t=30": {
+      "amplification_errors": {
+        "GA_rho_0": {
+          "max_abs": 7.216449660063518e-16,
+          "max_rel": 2.1568307315853165e-14
+        },
+        "GA_rho_0p5": {
+          "max_abs": 4.3298697960381105e-15,
+          "max_rel": 8.346851200692476e-15
+        },
+        "M1_amp": {
+          "max_abs": 1.1102230246251565e-16,
+          "max_rel": 1.1102265341843515e-16
+        },
+        "M2_amp": {
+          "max_abs": 1.942890293094024e-16,
+          "max_rel": 4.07489739765205e-14
+        },
+        "M3_amp": {
+          "max_abs": 4.440892098500626e-16,
+          "max_rel": 4.440894228537593e-16
+        }
+      },
+      "max_complex_abs_error": 2.9394874389361774e-09,
+      "max_complex_relative_error": 4.0973373320473196e-14
+    },
+    "t=5": {
+      "amplification_errors": {
+        "GA_rho_0": {
+          "max_abs": 1.2698175844150228e-15,
+          "max_rel": 3.83583930281697e-14
+        },
+        "GA_rho_0p5": {
+          "max_abs": 4.773959005888173e-15,
+          "max_rel": 9.288731706943565e-15
+        },
+        "M1_amp": {
+          "max_abs": 2.220446049250313e-16,
+          "max_rel": 2.2204497391540204e-16
+        },
+        "M2_amp": {
+          "max_abs": 3.0531133177191805e-16,
+          "max_rel": 7.342534962825736e-14
+        },
+        "M3_amp": {
+          "max_abs": 4.440892098500626e-16,
+          "max_rel": 4.440899297413332e-16
+        }
+      },
+      "max_complex_abs_error": 3.4633568991216684e-09,
+      "max_complex_relative_error": 7.348661171750631e-14
+    }
+  },
+  "figure_sources": {
+    "figure_1_generalized_alpha": "canonical ga_matrix/ga_rho only",
+    "figure_2_max_relative_data_error": 0.0
+  },
+  "generalized_alpha_matrix": {
+    "corrected_source": "/tmp/compacton_rc2/compacton-time-integration-reproducibility-v1.1.0/reproducibility/generalized_alpha/ga_core.py",
+    "max_matrix_difference": 0.0
+  },
+  "mesh_scaling": {
+    "data_errors": {
+      "GA_rho05_amp": {
+        "max_abs": 3.4416913763379853e-15,
+        "max_rel": 6.684260521076995e-15
+      },
+      "GA_rho0_amp": {
+        "max_abs": 2.220446049250313e-16,
+        "max_rel": 2.1938729799473595e-15
+      },
+      "M1_amp": {
+        "max_abs": 1.1102230246251565e-16,
+        "max_rel": 1.1102255119739603e-16
+      },
+      "M2_amp": {
+        "max_abs": 1.5265566588595902e-16,
+        "max_rel": 3.7426228692793e-15
+      },
+      "M3_amp": {
+        "max_abs": 3.3306690738754696e-16,
+        "max_rel": 3.330678119945667e-16
+      },
+      "abs(lambda_imag)": {
+        "max_abs": 2.0489096641540527e-08
+      },
+      "abs(lambda_real)": {
+        "max_abs": 1.3096723705530167e-10
+      },
+      "abs_lambda_max": {
+        "max_abs": 2.0489096641540527e-08,
+        "max_rel": 3.593756343692568e-15
+      },
+      "abs_z_max": {
+        "max_abs": 5.238689482212067e-10,
+        "max_rel": 3.675432624231036e-15
+      },
+      "max_abs_u": {
+        "max_abs": 0.0,
+        "max_rel": 0.0
+      }
+    },
+    "fit_errors": {
+      "intercept": 1.2434497875801753e-14,
+      "slope_vs_h": 2.6645352591003757e-15
+    }
+  },
+  "provenance": {
+    "basis": "archived equations, parameters, reports, frozen CSV outputs, and independent full recomputation",
+    "driver_status": "reconstructed authoritative drivers",
+    "original_historical_driver_recovered_byte_for_byte": false
+  },
+  "status": "JACOBIAN_TRACEABILITY_OK"
+}

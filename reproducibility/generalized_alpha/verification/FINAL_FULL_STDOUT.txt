@@ -1,0 +1,30 @@
+GENERALIZED_ALPHA_TRACEABILITY_OK
+
+Corrected implementation:
+  residual retains the independent algorithmic derivative V_n
+  historical defective generalized-alpha results are not used
+
+Picasso campaign:
+  microbank: 396/396 ok
+  fine boundary bank: 62/64 ok; the two failures are rho_inf=1 controls
+  independent N=1000, c1=2 benchmark: 7/7 ok
+  47/47 Slurm stderr files are empty
+
+Fine case used in Figure 3:
+  Pade AUC = 6.4561604549843294e-04
+  Pade |Delta I2/I2| = 3.9167343743260769e-03
+  figure CSV is byte-identical to the audited Picasso summary
+
+Manuscript:
+  superseded -21%, 0.30, 0.44 and 77--113 claims are absent
+  corrected tradeoff values and residual are present
+
+Validation rerun:
+  GA_CORRECTED_VALIDATION_OK
+  max_matrix_error=1.1102230246251565e-16
+  midpoint_endpoint_error=3.4694469519536142e-18
+  rho=1 final_order=2.000073266902
+  rho=0.9 final_order=2.000073706443
+  rho=0.5 final_order=1.998068415157
+  rho=0.25 final_order=1.987845572338
+  rho=0 final_order=1.938304931335

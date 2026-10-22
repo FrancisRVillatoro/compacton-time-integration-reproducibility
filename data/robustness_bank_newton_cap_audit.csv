@@ -1,0 +1,13 @@
+bank,method,assigned,status_ok,status_ok_with_any_cap_hit,max_total_cap_hits_in_one_status_ok_run,max_stored_newton_updates_among_status_ok,note
+bank01_mu_dt,M1,480,454,275,4443,9,cap hits are recorded separately and do not change status
+bank01_mu_dt,M2,480,480,285,856,9,cap hits are recorded separately and do not change status
+bank01_mu_dt,M3,480,457,280,13435,9,cap hits are recorded separately and do not change status
+bank02_dx_refinement,M1,432,395,208,2465,9,cap hits are recorded separately and do not change status
+bank02_dx_refinement,M2,432,432,231,2059,9,cap hits are recorded separately and do not change status
+bank02_dx_refinement,M3,432,398,210,7403,9,cap hits are recorded separately and do not change status
+bank03_collision_severity,M1,576,482,302,3801,9,cap hits are recorded separately and do not change status
+bank03_collision_severity,M2,576,576,406,2309,9,cap hits are recorded separately and do not change status
+bank03_collision_severity,M3,576,473,295,11423,9,cap hits are recorded separately and do not change status
+bank04_long_time,M1,192,123,37,17943,9,cap hits are recorded separately and do not change status
+bank04_long_time,M2,192,192,94,10874,9,cap hits are recorded separately and do not change status
+bank04_long_time,M3,192,122,33,53875,9,cap hits are recorded separately and do not change status

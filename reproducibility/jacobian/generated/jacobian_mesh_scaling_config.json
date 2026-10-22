@@ -1,0 +1,41 @@
+{
+  "command": "python recompute_mesh_scaling.py",
+  "generalized_alpha_source": "ga_matrix/ga_rho in jacobian_core.py",
+  "parameters": {
+    "c0": 1.0,
+    "c1": 2.0,
+    "c2": -1.0,
+    "dt": 0.025,
+    "eigen_count": 20,
+    "fine_fit_meshes": [
+      1000,
+      2000,
+      4000
+    ],
+    "length": 100.0,
+    "meshes": [
+      250,
+      500,
+      1000,
+      2000,
+      4000
+    ],
+    "mu": 0.001,
+    "p": 3.0,
+    "states": {
+      "overlap": [
+        48.0,
+        52.0
+      ],
+      "separated": [
+        40.0,
+        60.0
+      ]
+    }
+  },
+  "software": {
+    "numpy": "2.3.5",
+    "python": "3.13.5",
+    "scipy": "1.17.0"
+  }
+}

@@ -1,0 +1,8 @@
+FIGURE_TRACEABILITY_OK
+
+Figures 1--3 regenerated successfully.
+All six source-lineage PDFs were regenerated successfully.
+Figure 1 uses only the canonical generalized-alpha amplification matrix.
+Figure 2 uses the fully recomputed Jacobian mesh CSV.
+Figure 3 uses only the corrected fine-grid Picasso case.
+The old N=100 screening aggregate is retained for provenance but is not plotted.
